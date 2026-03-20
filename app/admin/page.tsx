@@ -35,23 +35,23 @@ export default function AdminLogin() {
 
         <form onSubmit={handleLogin} className="space-y-4">
           <div>
-            <label className="block text-gray-700 mb-2">Email</label>
+            <label className="block text-gray-900 font-medium mb-2">Email</label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border border-gray-400 rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-900"
               required
             />
           </div>
 
           <div>
-            <label className="block text-gray-700 mb-2">Wachtwoord</label>
+            <label className="block text-gray-900 font-medium mb-2">Wachtwoord</label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border border-gray-400 rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-900"
               required
             />
           </div>

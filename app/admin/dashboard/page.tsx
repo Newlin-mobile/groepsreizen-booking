@@ -63,7 +63,7 @@ export default function AdminDashboard() {
     <div className="min-h-screen bg-gray-50">
       <div className="bg-white shadow">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Admin Dashboard</h1>
+          <h1 className="text-2xl font-bold text-gray-900">Admin Dashboard</h1>
           <button
             onClick={handleLogout}
             className="text-gray-600 hover:text-gray-900"
@@ -93,7 +93,7 @@ export default function AdminDashboard() {
         {/* Bookings Table */}
         <div className="bg-white rounded-lg shadow overflow-hidden mb-8">
           <div className="px-6 py-4 border-b">
-            <h2 className="text-xl font-bold">Recente Boekingen</h2>
+            <h2 className="text-xl font-bold text-gray-900">Recente Boekingen</h2>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full">
@@ -130,7 +130,7 @@ export default function AdminDashboard() {
         {/* Trips Table */}
         <div className="bg-white rounded-lg shadow overflow-hidden">
           <div className="px-6 py-4 border-b">
-            <h2 className="text-xl font-bold">Reizen</h2>
+            <h2 className="text-xl font-bold text-gray-900">Reizen</h2>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full">

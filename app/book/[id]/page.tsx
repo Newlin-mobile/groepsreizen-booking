@@ -98,7 +98,7 @@ export default function BookingPage({ params }: { params: Promise<{ id: string }
           {/* Step 1: Trip Info */}
           {step === 1 && (
             <div>
-              <h2 className="text-3xl font-bold mb-6">{trip.name}</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">{trip.name}</h2>
               <img src={trip.image_url} alt={trip.name} className="w-full h-64 object-cover rounded-lg mb-6" />
               <p className="text-gray-800 mb-4">{trip.description}</p>
               <div className="space-y-2 mb-6">
@@ -111,11 +111,11 @@ export default function BookingPage({ params }: { params: Promise<{ id: string }
               </div>
               
               <div className="mb-6">
-                <label className="block text-gray-700 font-semibold mb-2">Aantal deelnemers</label>
+                <label className="block text-gray-900 font-semibold mb-2">Aantal deelnemers</label>
                 <select 
                   value={numParticipants}
                   onChange={(e) => handleNumParticipantsChange(parseInt(e.target.value))}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="w-full px-4 py-2 border border-gray-400 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900"
                 >
                   {[1,2,3,4,5,6,7,8,9,10].map(n => (
                     <option key={n} value={n}>{n} {n === 1 ? 'persoon' : 'personen'}</option>
@@ -135,29 +135,29 @@ export default function BookingPage({ params }: { params: Promise<{ id: string }
           {/* Step 2: Participants */}
           {step === 2 && (
             <div>
-              <h2 className="text-2xl font-bold mb-6">Gegevens deelnemers</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Gegevens deelnemers</h2>
               <div className="space-y-4 mb-6">
                 {participants.map((p, idx) => (
-                  <div key={idx} className="p-4 border border-gray-200 rounded-lg">
-                    <h3 className="font-semibold mb-3">Deelnemer {idx + 1}</h3>
+                  <div key={idx} className="p-4 border border-gray-300 rounded-lg">
+                    <h3 className="font-semibold text-gray-900 mb-3">Deelnemer {idx + 1}</h3>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm text-gray-700 mb-1">Naam *</label>
+                        <label className="block text-sm text-gray-900 font-medium mb-1">Naam *</label>
                         <input
                           type="text"
                           value={p.name}
                           onChange={(e) => handleParticipantChange(idx, 'name', e.target.value)}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                          className="w-full px-4 py-2 border border-gray-400 rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-900"
                           required
                         />
                       </div>
                       <div>
-                        <label className="block text-sm text-gray-700 mb-1">Email *</label>
+                        <label className="block text-sm text-gray-900 font-medium mb-1">Email *</label>
                         <input
                           type="email"
                           value={p.email}
                           onChange={(e) => handleParticipantChange(idx, 'email', e.target.value)}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                          className="w-full px-4 py-2 border border-gray-400 rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-900"
                           required
                         />
                       </div>
@@ -187,17 +187,17 @@ export default function BookingPage({ params }: { params: Promise<{ id: string }
           {/* Step 3: Summary */}
           {step === 3 && (
             <div>
-              <h2 className="text-2xl font-bold mb-6">Overzicht</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Overzicht</h2>
               
               <div className="mb-6 p-4 bg-blue-50 rounded-lg">
-                <h3 className="font-semibold text-lg mb-2">{trip.name}</h3>
+                <h3 className="font-semibold text-lg text-gray-900 mb-2">{trip.name}</h3>
                 <p className="text-gray-800 text-sm">
                   {new Date(trip.start_date).toLocaleDateString('nl-NL')} - {new Date(trip.end_date).toLocaleDateString('nl-NL')}
                 </p>
               </div>
 
               <div className="mb-6">
-                <h3 className="font-semibold mb-3">Deelnemers ({participants.length})</h3>
+                <h3 className="font-semibold text-gray-900 mb-3">Deelnemers ({participants.length})</h3>
                 <ul className="space-y-2">
                   {participants.map((p, idx) => (
                     <li key={idx} className="text-gray-900">
@@ -264,7 +264,7 @@ export default function BookingPage({ params }: { params: Promise<{ id: string }
               </div>
 
               <div className="text-left mb-6">
-                <h3 className="font-semibold mb-3">Samenvatting</h3>
+                <h3 className="font-semibold text-gray-900 mb-3">Samenvatting</h3>
                 <ul className="space-y-2 text-gray-900">
                   <li>Reis: {booking.trip_name}</li>
                   <li>Aantal deelnemers: {booking.participants_count}</li>
