@@ -83,7 +83,7 @@ if (adminExists.count === 0) {
       end_date: '2026-06-27',
       price: 799.00,
       max_participants: 35,
-      image_url: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800'
+      image_url: 'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800'
     },
     {
       name: 'Griekenland - Santorini',
