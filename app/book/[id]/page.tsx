@@ -69,7 +69,7 @@ export default function BookingPage({ params }: { params: Promise<{ id: string }
   if (loading || !trip) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="text-xl text-gray-600">Laden...</div>
+        <div className="text-xl text-gray-800">Laden...</div>
       </div>
     );
   }
@@ -81,7 +81,7 @@ export default function BookingPage({ params }: { params: Promise<{ id: string }
         <div className="mb-8">
           <div className="flex items-center justify-between mb-2">
             {['Reis', 'Deelnemers', 'Overzicht', 'Bevestiging'].map((label, idx) => (
-              <div key={idx} className={`flex-1 text-center text-sm ${step > idx ? 'text-blue-600 font-semibold' : 'text-gray-400'}`}>
+              <div key={idx} className={`flex-1 text-center text-sm ${step > idx ? 'text-blue-600 font-semibold' : 'text-gray-500'}`}>
                 {label}
               </div>
             ))}
@@ -100,9 +100,9 @@ export default function BookingPage({ params }: { params: Promise<{ id: string }
             <div>
               <h2 className="text-3xl font-bold mb-6">{trip.name}</h2>
               <img src={trip.image_url} alt={trip.name} className="w-full h-64 object-cover rounded-lg mb-6" />
-              <p className="text-gray-600 mb-4">{trip.description}</p>
+              <p className="text-gray-800 mb-4">{trip.description}</p>
               <div className="space-y-2 mb-6">
-                <p className="text-gray-700">
+                <p className="text-gray-900">
                   <strong>Data:</strong> {new Date(trip.start_date).toLocaleDateString('nl-NL')} - {new Date(trip.end_date).toLocaleDateString('nl-NL')}
                 </p>
                 <p className="text-gray-700">
@@ -191,7 +191,7 @@ export default function BookingPage({ params }: { params: Promise<{ id: string }
               
               <div className="mb-6 p-4 bg-blue-50 rounded-lg">
                 <h3 className="font-semibold text-lg mb-2">{trip.name}</h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-800 text-sm">
                   {new Date(trip.start_date).toLocaleDateString('nl-NL')} - {new Date(trip.end_date).toLocaleDateString('nl-NL')}
                 </p>
               </div>
@@ -200,7 +200,7 @@ export default function BookingPage({ params }: { params: Promise<{ id: string }
                 <h3 className="font-semibold mb-3">Deelnemers ({participants.length})</h3>
                 <ul className="space-y-2">
                   {participants.map((p, idx) => (
-                    <li key={idx} className="text-gray-700">
+                    <li key={idx} className="text-gray-900">
                       {idx + 1}. {p.name} ({p.email})
                     </li>
                   ))}
@@ -223,7 +223,7 @@ export default function BookingPage({ params }: { params: Promise<{ id: string }
               </div>
 
               <div className="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-gray-900">
                   <strong>Let op:</strong> Dit is een demo. Er wordt geen echte betaling verwerkt.
                   Na bevestiging ontvang je een booking reference.
                 </p>
@@ -265,14 +265,14 @@ export default function BookingPage({ params }: { params: Promise<{ id: string }
 
               <div className="text-left mb-6">
                 <h3 className="font-semibold mb-3">Samenvatting</h3>
-                <ul className="space-y-2 text-gray-700">
+                <ul className="space-y-2 text-gray-900">
                   <li>Reis: {booking.trip_name}</li>
                   <li>Aantal deelnemers: {booking.participants_count}</li>
                   <li>Totaalbedrag: €{booking.total_price.toFixed(2)}</li>
                 </ul>
               </div>
 
-              <p className="text-sm text-gray-600 mb-6">
+              <p className="text-sm text-gray-800 mb-6">
                 Een bevestigingsmail is verzonden naar alle deelnemers.
               </p>
 

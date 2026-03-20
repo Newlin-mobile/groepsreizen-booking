@@ -52,7 +52,7 @@ export default function AdminDashboard() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="text-xl text-gray-600">Laden...</div>
+        <div className="text-xl text-gray-800">Laden...</div>
       </div>
     );
   }
@@ -77,15 +77,15 @@ export default function AdminDashboard() {
         {/* Stats */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           <div className="bg-white p-6 rounded-lg shadow">
-            <div className="text-gray-500 text-sm mb-1">Totaal Boekingen</div>
+            <div className="text-gray-700 text-sm mb-1">Totaal Boekingen</div>
             <div className="text-3xl font-bold">{bookings.length}</div>
           </div>
           <div className="bg-white p-6 rounded-lg shadow">
-            <div className="text-gray-500 text-sm mb-1">Totale Omzet</div>
+            <div className="text-gray-700 text-sm mb-1">Totale Omzet</div>
             <div className="text-3xl font-bold text-green-600">€{totalRevenue.toFixed(2)}</div>
           </div>
           <div className="bg-white p-6 rounded-lg shadow">
-            <div className="text-gray-500 text-sm mb-1">Actieve Reizen</div>
+            <div className="text-gray-700 text-sm mb-1">Actieve Reizen</div>
             <div className="text-3xl font-bold">{trips.length}</div>
           </div>
         </div>
@@ -99,11 +99,11 @@ export default function AdminDashboard() {
             <table className="w-full">
               <thead className="bg-gray-50">
                 <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Reference</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Reis</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Bedrag</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Datum</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">Reference</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">Reis</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">Bedrag</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">Status</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">Datum</th>
                 </tr>
               </thead>
               <tbody className="divide-y">
@@ -117,7 +117,7 @@ export default function AdminDashboard() {
                         {booking.status}
                       </span>
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-500">
+                    <td className="px-6 py-4 text-sm text-gray-700">
                       {new Date(booking.created_at).toLocaleDateString('nl-NL')}
                     </td>
                   </tr>
@@ -136,9 +136,9 @@ export default function AdminDashboard() {
             <table className="w-full">
               <thead className="bg-gray-50">
                 <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Naam</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Prijs</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Max Deelnemers</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">Naam</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">Prijs</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">Max Deelnemers</th>
                 </tr>
               </thead>
               <tbody className="divide-y">

@@ -65,7 +65,7 @@ export default function AdminLogin() {
         </form>
 
         <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-800">
             <strong>Demo login:</strong><br />
             Email: admin@reizen.nl<br />
             Wachtwoord: Admin2026!
