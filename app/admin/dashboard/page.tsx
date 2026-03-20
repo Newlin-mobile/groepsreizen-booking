@@ -109,9 +109,9 @@ export default function AdminDashboard() {
               <tbody className="divide-y">
                 {bookings.map((booking) => (
                   <tr key={booking.id} className="hover:bg-gray-50">
-                    <td className="px-6 py-4 font-mono text-sm">{booking.booking_reference}</td>
-                    <td className="px-6 py-4">{booking.trip_name}</td>
-                    <td className="px-6 py-4">€{booking.total_price.toFixed(2)}</td>
+                    <td className="px-6 py-4 font-mono text-sm text-gray-900">{booking.booking_reference}</td>
+                    <td className="px-6 py-4 text-gray-900">{booking.trip_name}</td>
+                    <td className="px-6 py-4 text-gray-900">€{booking.total_price.toFixed(2)}</td>
                     <td className="px-6 py-4">
                       <span className="px-2 py-1 text-xs rounded-full bg-green-100 text-green-800">
                         {booking.status}
@@ -144,9 +144,9 @@ export default function AdminDashboard() {
               <tbody className="divide-y">
                 {trips.map((trip) => (
                   <tr key={trip.id} className="hover:bg-gray-50">
-                    <td className="px-6 py-4">{trip.name}</td>
-                    <td className="px-6 py-4">€{trip.price.toFixed(2)}</td>
-                    <td className="px-6 py-4">{trip.max_participants}</td>
+                    <td className="px-6 py-4 text-gray-900">{trip.name}</td>
+                    <td className="px-6 py-4 text-gray-900">€{trip.price.toFixed(2)}</td>
+                    <td className="px-6 py-4 text-gray-900">{trip.max_participants}</td>
                   </tr>
                 ))}
               </tbody>

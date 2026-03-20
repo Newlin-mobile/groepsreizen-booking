@@ -81,7 +81,7 @@ export default function BookingPage({ params }: { params: Promise<{ id: string }
         <div className="mb-8">
           <div className="flex items-center justify-between mb-2">
             {['Reis', 'Deelnemers', 'Overzicht', 'Bevestiging'].map((label, idx) => (
-              <div key={idx} className={`flex-1 text-center text-sm ${step > idx ? 'text-blue-600 font-semibold' : 'text-gray-500'}`}>
+              <div key={idx} className={`flex-1 text-center text-sm ${step > idx ? 'text-blue-600 font-semibold' : 'text-gray-700 font-medium'}`}>
                 {label}
               </div>
             ))}
@@ -169,7 +169,7 @@ export default function BookingPage({ params }: { params: Promise<{ id: string }
               <div className="flex gap-4">
                 <button 
                   onClick={() => setStep(1)}
-                  className="flex-1 bg-gray-200 text-gray-700 py-3 rounded-lg hover:bg-gray-300 font-semibold"
+                  className="flex-1 bg-gray-200 text-gray-900 py-3 rounded-lg hover:bg-gray-300 font-semibold"
                 >
                   Terug
                 </button>
@@ -232,7 +232,7 @@ export default function BookingPage({ params }: { params: Promise<{ id: string }
               <div className="flex gap-4">
                 <button 
                   onClick={() => setStep(2)}
-                  className="flex-1 bg-gray-200 text-gray-700 py-3 rounded-lg hover:bg-gray-300 font-semibold"
+                  className="flex-1 bg-gray-200 text-gray-900 py-3 rounded-lg hover:bg-gray-300 font-semibold"
                 >
                   Terug
                 </button>
@@ -259,7 +259,7 @@ export default function BookingPage({ params }: { params: Promise<{ id: string }
               <h2 className="text-3xl font-bold text-green-600 mb-4">Boeking Bevestigd!</h2>
               
               <div className="bg-gray-100 p-6 rounded-lg mb-6">
-                <p className="text-gray-600 mb-2">Jouw booking reference:</p>
+                <p className="text-gray-900 font-medium mb-2">Jouw booking reference:</p>
                 <p className="text-4xl font-bold text-gray-900 tracking-wider">{booking.booking_reference}</p>
               </div>
 
